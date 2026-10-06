@@ -21,6 +21,41 @@ Báo cáo này trình bày trọn vẹn giải pháp xây dựng một Agent đ�
 
 ---
 
+## Cấu Trúc Thư Mục & Tệp Tin (File Structure)
+
+```text
+BTTH3/
+├── 23521505_NguyenPhuocThinh_BTTH3.docx  # Báo cáo kết quả bài tập (định dạng Word)
+├── 23521505_NguyenPhuocThinh_BTTH3.pdf   # Báo cáo kết quả bài tập (định dạng PDF)
+├── BTTH3.md                              # Báo cáo kỹ thuật chi tiết (Markdown)
+├── requirements.txt                      # Danh sách các thư viện phụ thuộc
+├── .env.example                          # File mẫu cấu hình biến môi trường an toàn (chỉ chứa placeholder)
+├── main.py                               # CLI runner chạy 3 mẫu Agent theo các kịch bản
+├── test_harness.py                       # Bộ Unit Test kiểm thử độc lập 4 lớp Harness
+├── evaluate_agents.py                    # Khung thực nghiệm tự động đo lường so sánh (12 lượt chạy)
+├── evaluation_results.json               # Dữ liệu kết quả đo lường định lượng chi tiết
+├── lib/                                  # Thư viện mô-đun cốt lõi
+│   ├── __init__.py                       # Khởi tạo package Python
+│   ├── harness.py                        # Cài đặt đầy đủ 4 lớp Harness (Computational Sensors)
+│   ├── tools_flight.py                   # Bộ 5 Mockup Tools theo chuẩn LangChain (@tool)
+│   ├── mock_flight_db.py                 # Cơ sở dữ liệu in-memory mô phỏng chuyến bay & vé
+│   ├── model_gia.py                      # Giả lập phản hồi LLM theo kịch bản / Tích hợp API thật
+│   ├── agent_react.py                    # Cài đặt kiến trúc ReAct
+│   ├── agent_plan_execute.py             # Cài đặt kiến trúc Plan-then-Execute
+│   └── agent_hybrid.py                   # Cài đặt kiến trúc Mẫu Lai (Hybrid with Dynamic Replanning)
+└── screenshots/                          # Thư mục lưu trữ 8 ảnh chụp màn hình minh chứng
+    ├── hinh1_test_harness.png            # Kết quả Unit Test 4 lớp Harness
+    ├── hinh2_react_chuan.png             # Nhật ký thực thi Agent ReAct chuẩn
+    ├── hinh3_plan_execute_chuan.png      # Nhật ký thực thi Plan-then-Execute chuẩn
+    ├── hinh4_hybrid_chuan.png            # Nhật ký thực thi Agent Lai (Hybrid) chuẩn
+    ├── hinh5_evaluate_agents.png         # Bảng tổng hợp số liệu thực nghiệm
+    ├── hinh6_react_lap.png               # Minh chứng ngắt vòng lặp LoopDetector tại V2
+    ├── hinh7_react_canduyet.png          # Minh chứng kiểm quyền tiền kiểm PermissionGuard
+    └── hinh8_react_aogiac.png            # Minh chứng chống bịa đặt dữ liệu GroundingVerifier
+```
+
+---
+
 ## 1. Tổng Quan Bài Toán và Thiết Kế Bộ Mockup Tools
 
 Đặt vé máy bay là bài toán nghiệp vụ kinh điển nhưng phức tạp bậc nhất đối với một Autonomous Agent bởi những đặc thù sau:
