@@ -1,0 +1,28 @@
+# Environment & Sensitive files (DO NOT COMMIT API KEYS)
+.env
+*.env
+.env.*
+!.env.example
+
+# Python virtual environment & cache
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating system & Office temporary files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+~$*.docx
+~$*.doc
+~$*.xlsx
+~$*.pptx
+
+# IDE
+.idea/
+.vscode/

@@ -1,0 +1,196 @@
+{
+  "timestamp": "2026-10-06 18:52:27",
+  "scenarios_count": 4,
+  "patterns_tested": [
+    "ReAct",
+    "Plan-then-Execute",
+    "Lai (Hybrid)"
+  ],
+  "summary": [
+    {
+      "pattern": "ReAct",
+      "success_rate_pct": 100.0,
+      "avg_steps": 3.25,
+      "avg_tokens": 2141.5,
+      "avg_latency_ms": 7.65,
+      "safe_handoff_count": 2,
+      "grounding_accuracy_pct": 100.0
+    },
+    {
+      "pattern": "Plan-then-Execute",
+      "success_rate_pct": 100.0,
+      "avg_steps": 2.5,
+      "avg_tokens": 120.0,
+      "avg_latency_ms": 0.82,
+      "safe_handoff_count": 3,
+      "grounding_accuracy_pct": 100.0
+    },
+    {
+      "pattern": "Lai (Hybrid)",
+      "success_rate_pct": 100.0,
+      "avg_steps": 2.5,
+      "avg_tokens": 150.0,
+      "avg_latency_ms": 0.93,
+      "safe_handoff_count": 3,
+      "grounding_accuracy_pct": 100.0
+    }
+  ],
+  "details": [
+    {
+      "scenario_id": "SC1_HAPPY_PATH",
+      "scenario_name": "Kịch bản 1: Luồng chuẩn thành công (Happy Path)",
+      "pattern": "ReAct",
+      "status": "COMPLETED",
+      "matched_expected": true,
+      "steps": 5,
+      "tokens": 4012,
+      "elapsed_ms": 26.75,
+      "completion_verified": true,
+      "has_handoff": false,
+      "grounding_passed": true
+    },
+    {
+      "scenario_id": "SC1_HAPPY_PATH",
+      "scenario_name": "Kịch bản 1: Luồng chuẩn thành công (Happy Path)",
+      "pattern": "Plan-then-Execute",
+      "status": "COMPLETED",
+      "matched_expected": true,
+      "steps": 4,
+      "tokens": 120,
+      "elapsed_ms": 1.51,
+      "completion_verified": true,
+      "has_handoff": false,
+      "grounding_passed": true
+    },
+    {
+      "scenario_id": "SC1_HAPPY_PATH",
+      "scenario_name": "Kịch bản 1: Luồng chuẩn thành công (Happy Path)",
+      "pattern": "Lai (Hybrid)",
+      "status": "COMPLETED",
+      "matched_expected": true,
+      "steps": 4,
+      "tokens": 150,
+      "elapsed_ms": 1.44,
+      "completion_verified": true,
+      "has_handoff": false,
+      "grounding_passed": true
+    },
+    {
+      "scenario_id": "SC2_OVER_BUDGET",
+      "scenario_name": "Kịch bản 2: Vượt trần ngân sách (Over Budget)",
+      "pattern": "ReAct",
+      "status": "STOPPED",
+      "matched_expected": true,
+      "steps": 2,
+      "tokens": 991,
+      "elapsed_ms": 1.11,
+      "completion_verified": false,
+      "has_handoff": false,
+      "grounding_passed": true
+    },
+    {
+      "scenario_id": "SC2_OVER_BUDGET",
+      "scenario_name": "Kịch bản 2: Vượt trần ngân sách (Over Budget)",
+      "pattern": "Plan-then-Execute",
+      "status": "HANDOFF_CONSTRAINT_VIOLATION",
+      "matched_expected": true,
+      "steps": 1,
+      "tokens": 120,
+      "elapsed_ms": 0.51,
+      "completion_verified": false,
+      "has_handoff": true,
+      "grounding_passed": true
+    },
+    {
+      "scenario_id": "SC2_OVER_BUDGET",
+      "scenario_name": "Kịch bản 2: Vượt trần ngân sách (Over Budget)",
+      "pattern": "Lai (Hybrid)",
+      "status": "HANDOFF_CONSTRAINT_VIOLATION",
+      "matched_expected": true,
+      "steps": 1,
+      "tokens": 150,
+      "elapsed_ms": 0.61,
+      "completion_verified": false,
+      "has_handoff": true,
+      "grounding_passed": true
+    },
+    {
+      "scenario_id": "SC3_LOOP_INDUCEMENT",
+      "scenario_name": "Kịch bản 3: Chống vòng lặp & Bế tắc (Loop & Error Prevention)",
+      "pattern": "ReAct",
+      "status": "HANDOFF_LOOP_DETECTED",
+      "matched_expected": true,
+      "steps": 2,
+      "tokens": 766,
+      "elapsed_ms": 0.91,
+      "completion_verified": false,
+      "has_handoff": true,
+      "grounding_passed": true
+    },
+    {
+      "scenario_id": "SC3_LOOP_INDUCEMENT",
+      "scenario_name": "Kịch bản 3: Chống vòng lặp & Bế tắc (Loop & Error Prevention)",
+      "pattern": "Plan-then-Execute",
+      "status": "HANDOFF_ERROR",
+      "matched_expected": true,
+      "steps": 1,
+      "tokens": 120,
+      "elapsed_ms": 0.4,
+      "completion_verified": false,
+      "has_handoff": true,
+      "grounding_passed": true
+    },
+    {
+      "scenario_id": "SC3_LOOP_INDUCEMENT",
+      "scenario_name": "Kịch bản 3: Chống vòng lặp & Bế tắc (Loop & Error Prevention)",
+      "pattern": "Lai (Hybrid)",
+      "status": "HANDOFF_ERROR",
+      "matched_expected": true,
+      "steps": 1,
+      "tokens": 150,
+      "elapsed_ms": 0.39,
+      "completion_verified": false,
+      "has_handoff": true,
+      "grounding_passed": true
+    },
+    {
+      "scenario_id": "SC4_PERMISSION_CHECK",
+      "scenario_name": "Kịch bản 4: Kiểm quyền thao tác nhạy cảm (Permission Guard)",
+      "pattern": "ReAct",
+      "status": "AWAITING_APPROVAL",
+      "matched_expected": true,
+      "steps": 4,
+      "tokens": 2797,
+      "elapsed_ms": 1.83,
+      "completion_verified": false,
+      "has_handoff": true,
+      "grounding_passed": true
+    },
+    {
+      "scenario_id": "SC4_PERMISSION_CHECK",
+      "scenario_name": "Kịch bản 4: Kiểm quyền thao tác nhạy cảm (Permission Guard)",
+      "pattern": "Plan-then-Execute",
+      "status": "AWAITING_APPROVAL",
+      "matched_expected": true,
+      "steps": 4,
+      "tokens": 120,
+      "elapsed_ms": 0.87,
+      "completion_verified": false,
+      "has_handoff": true,
+      "grounding_passed": true
+    },
+    {
+      "scenario_id": "SC4_PERMISSION_CHECK",
+      "scenario_name": "Kịch bản 4: Kiểm quyền thao tác nhạy cảm (Permission Guard)",
+      "pattern": "Lai (Hybrid)",
+      "status": "AWAITING_APPROVAL",
+      "matched_expected": true,
+      "steps": 4,
+      "tokens": 150,
+      "elapsed_ms": 1.26,
+      "completion_verified": false,
+      "has_handoff": true,
+      "grounding_passed": true
+    }
+  ]
+}
