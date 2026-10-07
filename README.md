@@ -18,5 +18,4 @@
 * [BTTH5](./BTTH5): **Kỹ Thuật Sử Dụng Công Cụ và Kỹ Năng Trong Agentic AI (Tool Use & Skill Use)**
   * **Bài 1:** Tra cứu chính sách đúng phiên bản bằng tool an toàn `list_files` và Skill `refund-policy` (khám phá động tệp chính sách khi đổi tên file, đối chiếu mốc hiệu lực và kiểm soát điều kiện kích hoạt).
   * **Bài 2:** Kiểm tra quá tải theo người bằng script Python xác định `check_csv.py` (tích hợp cờ CLI `--max-hours`, First Occurrence Rule khử trùng lặp `task_id`) và Skill `csv-quality`.
-  * **Kiểm thử toàn diện:** Vượt qua 100% bộ kiểm thử tự động (218 / 218 unit & integration test cases PASSED qua 5 stages).
   * **Báo cáo chi tiết:** [BTTH5.md](./BTTH5/BTTH5.md) | [Word (.docx)](./BTTH5/23521505_NguyenPhuocThinh_BTTH5.docx) | [PDF (.pdf)](./BTTH5/23521505_NguyenPhuocThinh_BTTH5.pdf)
