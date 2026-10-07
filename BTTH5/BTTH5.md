@@ -36,7 +36,6 @@ BTTH5/
 ├── 23521505_NguyenPhuocThinh_BTTH5.docx      # Báo cáo kết quả bài tập (định dạng Microsoft Word)
 ├── 23521505_NguyenPhuocThinh_BTTH5.pdf       # Báo cáo kết quả bài tập (định dạng PDF)
 ├── BTTH5.md                                  # Báo cáo kỹ thuật chi tiết (định dạng Markdown)
-├── analysis.md                               # Báo cáo phân tích chuyên sâu đối chiếu trace
 ├── screenshots/                              # Thư mục lưu trữ 7 ảnh chụp màn hình minh chứng
 │   ├── hinh1_block1_case_b_renamed.png       # Nhật ký thực thi Agent Case B sau khi đổi tên file
 │   ├── hinh2_block1_case_a.png               # Nhật ký thực thi Agent Case A (mua trước tháng 10)
@@ -46,7 +45,6 @@ BTTH5/
 │   ├── hinh6_block2_missing_threshold_and_file.png # Nhật ký xử lý an toàn khi thiếu ngưỡng & file lỗi
 │   └── hinh7_test_harness.png                # Kết quả kiểm thử tự động toàn diện pytest (218/218 passed)
 ├── submission/                               # Thư mục đóng gói các deliverables kỹ thuật nộp bài
-│   ├── analysis.md                           # Báo cáo phân tích đối chiếu trace phục vụ chấm điểm
 │   ├── block1/                               # Dữ liệu & kết quả của Block 1
 │   │   ├── tools/                            # Mã nguồn list_files và phần đăng ký tool (stage 01 & 02)
 │   │   │   ├── files_stage01.py              # Mã nguồn tools/files.py của stage 01
