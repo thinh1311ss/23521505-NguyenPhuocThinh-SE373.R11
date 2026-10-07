@@ -1,0 +1,48 @@
+{
+  "input": "/Users/macbook/Documents/HKI_2627/SE373_AgenticAI/BTTH/BTTH5/agent-tools-skills-lab/stage-04-script-skill/workspace/data/workload-edge.csv",
+  "row_count": 3,
+  "missing_owner_count": 0,
+  "invalid_hours_count": 1,
+  "duplicate_id_count": 1,
+  "duplicate_ids": [
+    "E01"
+  ],
+  "issues": [
+    {
+      "line": 2,
+      "column": "hours",
+      "type": "invalid_hours",
+      "task_id": "E01",
+      "value": "abc",
+      "message": "hours 'abc' không phải số hữu hạn không âm."
+    },
+    {
+      "line": 3,
+      "column": "task_id",
+      "type": "duplicate_id",
+      "task_id": "E01",
+      "message": "task_id E01 đã xuất hiện ở line 2."
+    }
+  ],
+  "max_hours": 0,
+  "hours_by_owner": {
+    "Minh": 0
+  },
+  "overloaded_owners": [],
+  "excluded_rows": [
+    {
+      "line": 2,
+      "task_id": "E01",
+      "reasons": [
+        "invalid_hours"
+      ]
+    },
+    {
+      "line": 3,
+      "task_id": "E01",
+      "reasons": [
+        "duplicate_id"
+      ]
+    }
+  ]
+}

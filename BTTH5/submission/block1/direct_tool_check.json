@@ -1,0 +1,61 @@
+{
+  "case1_valid_directory": {
+    "input": "data/policies",
+    "output": {
+      "ok": true,
+      "path": "data/policies",
+      "entries": [
+        {
+          "name": "chinh-sach-truoc-10.md",
+          "path": "data/policies/chinh-sach-truoc-10.md",
+          "type": "file"
+        },
+        {
+          "name": "chinh-sach-tu-10.md",
+          "path": "data/policies/chinh-sach-tu-10.md",
+          "type": "file"
+        },
+        {
+          "name": "policy-before-oct.md",
+          "path": "data/policies/policy-before-oct.md",
+          "type": "file"
+        },
+        {
+          "name": "policy-from-oct.md",
+          "path": "data/policies/policy-from-oct.md",
+          "type": "file"
+        }
+      ]
+    }
+  },
+  "case2_file_path": {
+    "input": "data/policies/policy-before-oct.md",
+    "output": {
+      "ok": false,
+      "error": {
+        "code": "NOT_A_DIRECTORY",
+        "message": "Đây là file, không phải thư mục: data/policies/policy-before-oct.md"
+      }
+    }
+  },
+  "case3_nonexistent_path": {
+    "input": "data/nonexistent_dir",
+    "output": {
+      "ok": false,
+      "error": {
+        "code": "DIR_NOT_FOUND",
+        "message": "Không tìm thấy thư mục: data/nonexistent_dir"
+      }
+    }
+  },
+  "case4_path_traversal": {
+    "input": "../../etc",
+    "output": {
+      "ok": false,
+      "error": {
+        "code": "PATH_OUTSIDE_WORKSPACE",
+        "message": "Đường dẫn thoát ra ngoài workspace: ../../etc"
+      }
+    }
+  }
+}
