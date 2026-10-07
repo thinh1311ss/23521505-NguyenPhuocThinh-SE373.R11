@@ -4,7 +4,7 @@
 
 ---
 
-# BÁO CÁO BÀI TẬP THỰC HÀNH SỐ 5 (BTTH5)
+# BÁO CÁO BÀI TẬP THỰC HÀNH SỐ 5
 ### CHUYÊN ĐỀ: KỸ THUẬT SỬ DỤNG CÔNG CỤ VÀ KỸ NĂNG TRONG AGENTIC AI
 ### (TOOL USE & SKILL USE IN AGENTIC AI ENGINEERING)
 
@@ -374,16 +374,5 @@ Nếu không đồng bộ hóa Skill và Reference khi nâng cấp Script:
 | **Block 2 - Thiếu ngưỡng** | Câu hỏi thiếu ngưỡng số giờ | Đọc skill $\rightarrow$ phát hiện thiếu tham số CLI | **Hỏi lại ngưỡng max_hours**, không tự gán mặc định | Dòng 7-8 (`model_response` hỏi lại) trong `20261007-133813` |
 | **Block 2 - File lỗi** | Tệp `data/khong-ton-tai.csv` | Chạy Bash script $\rightarrow$ script thoát exit code 1 | Báo lỗi không đọc được tệp, không bịa đặt số liệu | Dòng 9 (`exit_code: 1`), Dòng 11 (`answer` báo lỗi) trong `20261007-133838` |
 
----
 
-## 4. KẾT LUẬN VÀ BÀI HỌC KINH NGHIỆM
-
-1. **Sự kết hợp hoàn hảo giữa Tool, Skill và Script:**
-   - Một hệ thống Agentic AI chuẩn doanh nghiệp không thể chỉ dựa vào prompt hay chỉ dựa vào tool. Hệ thống cần sự phân tầng rõ rệt: **Tools** cung cấp quyền năng tương tác vật lý trong sandbox an toàn; **Deterministic Scripts** đảm bảo tính toán số học chính xác 100%; và **Skills** đóng vai trò là "bộ não nghiệp vụ" định hướng hành vi, kiểm soát điều kiện tiên quyết và quy chuẩn hóa giao tiếp.
-2. **Khắc phục triệt để tính xác suất (Stochastic Nature) của LLM:**
-   - Việc giao các tác vụ số học, đếm, lọc dữ liệu cho script Python chuyên biệt giúp triệt tiêu hoàn toàn nguy cơ tính nhẩm sai của mô hình ngôn ngữ lớn. LLM tập trung vào thế mạnh cốt lõi: hiểu ngôn ngữ tự nhiên, điều phối công cụ và tổng hợp báo cáo chuyên nghiệp.
-3. **Tính thích ứng động và Khả năng chịu lỗi:**
-   - Nhờ có tool `list_files` và chỉ dẫn động trong `SKILL.md`, Agent có khả năng tự động khám phá và làm việc chính xác ngay cả khi cấu trúc tệp tin bị đổi tên hoặc di chuyển mà không cần bảo trì hay sửa đổi mã nguồn/prompt tĩnh.
-
-Sinh viên **Nguyễn Phước Thịnh (MSSV: 23521505)** cam kết toàn bộ dữ liệu, mã nguồn và kết quả thực nghiệm trong báo cáo này được thực hiện trung thực, tuân thủ tuyệt đối chuẩn mực học thuật và các yêu cầu kỹ thuật của môn học Kỹ thuật xây dựng hệ thống Agentic AI (SE373).
 
